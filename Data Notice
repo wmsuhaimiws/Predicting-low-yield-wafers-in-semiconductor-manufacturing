@@ -1,4 +1,4 @@
-Data notice: This covers the code in this repository only. The SECOM
+Data Notice: This covers the code in this repository only. The SECOM
 (UCI id 179) and AI4I 2020 (UCI id 601) datasets are provided by the UCI
 Machine Learning Repository for research use and are NOT redistributed here;
 they are fetched at runtime. Please cite the UCI Machine Learning Repository
