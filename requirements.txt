@@ -1,0 +1,27 @@
+# ----------------------------------------------------------------------------
+# SECOM Yield Optimization — reproducible environment
+# Tested with Python 3.10–3.12 (Google Colab default works out of the box).
+# Install:  pip install -r requirements.txt
+# ----------------------------------------------------------------------------
+
+# Core data stack
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.13.1
+
+# Modeling
+scikit-learn==1.5.1
+imbalanced-learn==0.12.3      # SMOTE and imbalanced-aware pipelines
+
+# Visualization
+matplotlib==3.9.1
+seaborn==0.13.2
+plotly==5.23.0
+kaleido==0.2.1                # static PNG export of Plotly figures
+
+# Data acquisition
+ucimlrepo==0.0.7             # programmatic UCI fetch (datasets 179 & 601)
+
+# Notebook / utilities
+jupyter==1.0.0
+tqdm==4.66.4
