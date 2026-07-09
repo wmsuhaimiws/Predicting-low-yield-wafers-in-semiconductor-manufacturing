@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 640" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5D6D7E"/>
+    </marker>
+    <style>
+      .stage  { fill:#ffffff; stroke:#5D6D7E; stroke-width:2; rx:10; }
+      .accent { fill:#EAF2F8; stroke:#1F77B4; stroke-width:2; rx:10; }
+      .risk   { fill:#FDEDEC; stroke:#C0392B; stroke-width:2; rx:10; }
+      .big    { fill:#FEF9E7; stroke:#B7950B; stroke-width:2; rx:10; }
+      .title  { font-size:21px; font-weight:700; fill:#1B2631; }
+      .sub    { font-size:12px; fill:#566573; }
+      .lbl    { font-size:14px; font-weight:700; fill:#1B2631; }
+      .small  { font-size:11.5px; fill:#566573; }
+      .tag    { font-size:11px; font-weight:700; fill:#1F77B4; }
+      .flow   { stroke:#5D6D7E; stroke-width:2; fill:none; marker-end:url(#arrow); }
+    </style>
+  </defs>
+
+  <text x="40" y="40" class="title">SECOM Yield Optimization — Data-Management Pipeline</text>
+  <text x="40" y="62" class="sub">Industry problem → data → cleaning → EDA → imbalance-aware modelling → insights → recommendations</text>
+
+  <!-- Row 1: main flow -->
+  <!-- 1 Acquire -->
+  <rect class="stage" x="40" y="95" width="180" height="92" rx="10"/>
+  <text x="130" y="123" text-anchor="middle" class="lbl">1 · Acquire</text>
+  <text x="130" y="144" text-anchor="middle" class="small">UCI SECOM (id 179)</text>
+  <text x="130" y="160" text-anchor="middle" class="small">ucimlrepo + fallbacks</text>
+  <text x="130" y="176" text-anchor="middle" class="small">1,567 × 590 + label</text>
+
+  <!-- 2 Clean -->
+  <rect class="risk" x="250" y="95" width="190" height="92" rx="10"/>
+  <text x="345" y="123" text-anchor="middle" class="lbl">2 · Clean</text>
+  <text x="345" y="144" text-anchor="middle" class="small">drop &gt;50% missing · impute</text>
+  <text x="345" y="160" text-anchor="middle" class="small">drop near-constant · winsorize</text>
+  <text x="345" y="176" text-anchor="middle" class="small">42k NaNs → 0 · 590 → ~410</text>
+
+  <!-- 3 EDA -->
+  <rect class="accent" x="470" y="95" width="180" height="92" rx="10"/>
+  <text x="560" y="123" text-anchor="middle" class="lbl">3 · EDA</text>
+  <text x="560" y="144" text-anchor="middle" class="small">8 figures: balance,</text>
+  <text x="560" y="160" text-anchor="middle" class="small">missingness, variance,</text>
+  <text x="560" y="176" text-anchor="middle" class="small">correlation, distributions</text>
+
+  <!-- 4 Model -->
+  <rect class="risk" x="680" y="95" width="200" height="92" rx="10"/>
+  <text x="780" y="123" text-anchor="middle" class="lbl">4 · Model</text>
+  <text x="780" y="144" text-anchor="middle" class="small">stratified split · scale + SMOTE</text>
+  <text x="780" y="160" text-anchor="middle" class="small">class-weight vs SMOTE</text>
+  <text x="780" y="176" text-anchor="middle" class="small">LogReg · RandomForest</text>
+
+  <!-- 5 Evaluate -->
+  <rect class="stage" x="910" y="95" width="230" height="92" rx="10"/>
+  <text x="1025" y="123" text-anchor="middle" class="lbl">5 · Evaluate &amp; rank</text>
+  <text x="1025" y="144" text-anchor="middle" class="small">recall · PR-AUC · F1 (fail)</text>
+  <text x="1025" y="160" text-anchor="middle" class="small">threshold tuning</text>
+  <text x="1025" y="176" text-anchor="middle" class="small">feature importance → IDs</text>
+
+  <!-- arrows row1 -->
+  <path class="flow" d="M220 141 L248 141"/>
+  <path class="flow" d="M440 141 L468 141"/>
+  <path class="flow" d="M650 141 L678 141"/>
+  <path class="flow" d="M880 141 L908 141"/>
+
+  <!-- down arrow to row2 -->
+  <path class="flow" d="M1025 187 L1025 250"/>
+
+  <!-- Row 2: outputs flowing right-to-left back to business -->
+  <!-- 6 Insights -->
+  <rect class="accent" x="910" y="252" width="230" height="92" rx="10"/>
+  <text x="1025" y="280" text-anchor="middle" class="lbl">6 · Insights</text>
+  <text x="1025" y="301" text-anchor="middle" class="small">rare-event framing · vital-few</text>
+  <text x="1025" y="317" text-anchor="middle" class="small">structural missingness</text>
+  <text x="1025" y="333" text-anchor="middle" class="small">multivariate failure</text>
+
+  <!-- 7 Creativity -->
+  <rect class="accent" x="680" y="252" width="200" height="92" rx="10"/>
+  <text x="780" y="280" text-anchor="middle" class="lbl">7 · Creativity</text>
+  <text x="780" y="301" text-anchor="middle" class="small">Plotly dashboard</text>
+  <text x="780" y="317" text-anchor="middle" class="small">yield Pareto · this diagram</text>
+  <text x="780" y="333" text-anchor="middle" class="small">AI4I predictive-maint. add-on</text>
+
+  <!-- 8 Recommend -->
+  <rect class="stage" x="470" y="252" width="180" height="92" rx="10"/>
+  <text x="560" y="280" text-anchor="middle" class="lbl">8 · Recommend</text>
+  <text x="560" y="301" text-anchor="middle" class="small">SPC watch-list ·</text>
+  <text x="560" y="317" text-anchor="middle" class="small">recall-tuned screen ·</text>
+  <text x="560" y="333" text-anchor="middle" class="small">fix instrumentation</text>
+
+  <!-- Business outcome -->
+  <rect class="risk" x="250" y="252" width="190" height="92" rx="10"/>
+  <text x="345" y="284" text-anchor="middle" class="lbl">Yield ↑ / Cost ↓</text>
+  <text x="345" y="307" text-anchor="middle" class="small">higher pass rate,</text>
+  <text x="345" y="323" text-anchor="middle" class="small">lower per-unit cost</text>
+
+  <!-- arrows row2 (leftward) -->
+  <path class="flow" d="M910 298 L882 298"/>
+  <path class="flow" d="M680 298 L652 298"/>
+  <path class="flow" d="M470 298 L442 298"/>
+
+  <!-- Big-data lane -->
+  <rect class="big" x="40" y="410" width="1100" height="150" rx="12"/>
+  <text x="60" y="440" class="lbl" fill="#7D6608">Big-data lane — fab scale: when telemetry no longer fits in memory</text>
+
+  <rect class="stage" x="60" y="458" width="190" height="80" rx="10"/>
+  <text x="155" y="486" text-anchor="middle" class="lbl">Sensor stream</text>
+  <text x="155" y="507" text-anchor="middle" class="small">append-only events</text>
+  <text x="155" y="523" text-anchor="middle" class="small">(wafer, sensor, reading, ts)</text>
+
+  <rect class="stage" x="300" y="458" width="200" height="80" rx="10"/>
+  <text x="400" y="486" text-anchor="middle" class="lbl">melt_to_long.py</text>
+  <text x="400" y="507" text-anchor="middle" class="small">ETL landing →</text>
+  <text x="400" y="523" text-anchor="middle" class="small">long format on HDFS</text>
+
+  <rect class="big" x="550" y="458" width="250" height="80" rx="10"/>
+  <text x="675" y="486" text-anchor="middle" class="lbl">Hive · Pig aggregation</text>
+  <text x="675" y="507" text-anchor="middle" class="small">GROUP BY sensor_id · JOIN labels</text>
+  <text x="675" y="523" text-anchor="middle" class="small">profile · pass/fail shift · yield KPI</text>
+
+  <rect class="accent" x="850" y="458" width="230" height="80" rx="10"/>
+  <text x="965" y="486" text-anchor="middle" class="lbl">Compact extract</text>
+  <text x="965" y="507" text-anchor="middle" class="small">few-thousand-row summary</text>
+  <text x="965" y="523" text-anchor="middle" class="small">→ pandas / scikit-learn</text>
+
+  <path class="flow" d="M250 498 L298 498"/>
+  <path class="flow" d="M500 498 L548 498"/>
+  <path class="flow" d="M800 498 L848 498"/>
+
+  <text x="40" y="600" class="small">Palette: grey = neutral stage · blue = analysis/output · red = risk / fail-focus · gold = big-data lane.</text>
+</svg>
