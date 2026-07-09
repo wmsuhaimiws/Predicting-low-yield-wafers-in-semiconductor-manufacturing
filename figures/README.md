@@ -3,7 +3,7 @@
 All figures are produced **automatically** by running the notebook
 (`notebooks/secom_yield_analysis.ipynb`) or `python -m src.eda`. They are written
 here as 150-dpi PNGs. The interactive Plotly dashboard is included as
-`docs/interactive_dashboard.html`.
+`interactive_dashboard.html`.
 
 | File | Serves | Chart | What it answers |
 |---|---|---|---|
