@@ -103,9 +103,7 @@ secom-yield-optimization/
 ├── LICENSE                        ← MIT (code) + data-use notice
 ├── requirements.txt               ← pinned, reproducible environment
 ├── .gitignore
-├── SECOM_Yield_Optimization.pptx  ← viva / presentation deck (11 slides)
-├── data/
-│   └── README.md                  ← acquisition instructions (raw data not committed)
+├── SECOM_Yield_Optimization.pddf  ← PDF presentation 11 slides
 ├── notebooks/
 │   ├── secom_yield_analysis.ipynb       ← analysis & modelling (pandas/scikit-learn)
 │   ├── bigdata_demo_pig_hive.ipynb      ← Pig (local mode) + HiveQL via Spark SQL
