@@ -130,9 +130,8 @@ secom-yield-optimization/
     ├── insights.md                ← data-driven insights + semiconductor context
     ├── recommendations.md         ← actionable fab recommendations
     ├── executive_summary.md       ← one-page summary for leadership
-    ├── executive_summary.pdf      ← one-page summary, print-ready (A4)
-    ├── pipeline_diagram.svg       ← methodology diagram
-    └── github_setup.md            ← exact publish/push steps
+    └── pipeline_diagram.svg       ← methodology diagram
+
 ```
 
 ## 6. Reproduce in 5 minutes (Code Quality & Reproducibility)
